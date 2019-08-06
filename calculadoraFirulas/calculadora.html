@@ -2,14 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
        <title>Devin - Calculadora Complexa</title>
-    <style type="text/css">
-    /* Conteúdo do CSS */
-    </style>
-    
-    <script type="text/javascript">
-    /* Conteúdo do JavaScript */
-    </script>
-    
+    <link rel="stylesheet" href="calculadora.css"/>
+
     </head>
     <body>
     
@@ -19,7 +13,7 @@
     
           <input type="text" name="visor" id="visor" />
     
-          <table id="calc">
+          <table name="calc" id="calc">
              <tr>
                 <td><input type="button" name="num9" class="num" value="9" onclick="calcNum(9)" /></td>
                 <td><input type="button" name="num8" class="num" value="8" onclick="calcNum(8)" /></td>
@@ -32,21 +26,25 @@
                 <td><input type="button" name="num4" class="num" value="4" onclick="calcNum(4)" /></td>
                 <td><input type="button" name="subtrair" class="oper" value="-" onclick="calcParse('subtrair')" /></td>
              </tr>
-             <tr>
+             <tr name="mult">
                 <td><input type="button" name="num3" class="num" value="3" onclick="calcNum(3)" /></td>
                 <td><input type="button" name="num2" class="num" value="2" onclick="calcNum(2)" /></td>
                 <td><input type="button" name="num1" class="num" value="1" onclick="calcNum(1)" /></td>
-                <td><input type="button" name="multiplicar" class="oper" value="*" onclick="calcParse('multiplicar')" /></td>
+                <td id="tdMult"><input type="button" name="multiplicar" class="oper" value="*" onclick="calcParse('multiplicar')" /></td>
+                <!--<td><input type="button" name="elevar" class="oper" value="^" onclick="calcParse('elevar')" /></td>-->
              </tr>
-             <tr>
+             <tr name="div">
                 <td><input type="button" name="num0" class="num" value="0" onclick="calcNum(0)" /></td>
                 <td><input type="button" name="igual" class="num" value="=" onclick="calcParse('resultado')" /></td>
-                <td><input type="button" name="limpar" class="num" value="AC" onclick="calcLimpar()" /></td>
-                <td><input type="button" name="dividir" class="oper" value="/" onclick="calcParse('dividir')" /></td>
+                <td><input type="button" name="limpar" class="num" value="!" onclick="alternar()"/></td>
+                <td id="tdDiv"><input type="button" name="dividir" class="oper" value="/" onclick="calcParse('dividir')" /></td>
+                <!--<td><input type="button" name="limpar" class="num" value="AC" onclick="calcLimpar()" /></td>-->
              </tr>
           </table>
        </fieldset>
     </form>
-    
+    <script type="text/javascript" src="calculadora.js">
+    /* Conteúdo do JavaScript */
+    </script>
     </body>
 </html>
