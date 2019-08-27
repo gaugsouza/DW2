@@ -59,7 +59,7 @@ function ordenarAssunto(){
         assuntos.forEach(assunto=>{
             topicos.push(document.createElement("ul"));
             pos = topicos.length-1;
-            topicos[pos].innerHTML = assunto;
+            topicos[pos].innerText = assunto;
             topicos[pos].classList.add("elementoul");
         });
 
@@ -70,7 +70,6 @@ function ordenarAssunto(){
         while(rootList.firstChild){
             rootList.removeChild(rootList.firstChild);
         }
-    
         topicos.forEach(topico => {
             rootList.appendChild(topico);
         });
@@ -105,11 +104,14 @@ function coletaAssunto(emailList){
 }
 
 function agrupaAssunto(element, topicos){
+    let auxElement, auxTopico
     topicos.forEach(topico => {
-        if(toString(topico.innerText).indexOf(element.childNodes[0].innerText === -1)){
-            topico.appendChild(element);
-            
-        }
+        auxElement = element.childNodes[0].innerText;
+        auxTopico = topico.childNodes[0].data;
+        
+        if(auxElement.indexOf(auxTopico) != -1){
+            topico.appendChild(element)
+        }            
     });
 }
 
