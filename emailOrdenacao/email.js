@@ -124,7 +124,6 @@ function ordenarAssunto(){
         rootList.childNodes.forEach(function(element){
             agrupaAssunto(element.childNodes[0], topicos);
         });
-
         while(rootList.firstChild){
             rootList.removeChild(rootList.firstChild);
         }
@@ -167,7 +166,6 @@ function agrupaAssunto(element, topicos){
     topicos.forEach(function(topico){
         auxElement = element.childNodes[0].innerText;
         auxTopico = topico.childNodes[0].data;
-
         if(auxElement.indexOf(auxTopico) != -1){
             topico.appendChild(element);
         }
