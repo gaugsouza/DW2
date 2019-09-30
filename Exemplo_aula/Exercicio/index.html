@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mercado</title>
+   <meta charset="UTF-8">
+   <script type="text/javascript" src="../jQuery/jquery-3.4.1.min.js"></script>
+   <script type="text/javascript" language="javascript">
+   $(function() {
+        let resultado = 0;
+        $.getJSON('../jQuery/dadosExemplo.json', function(p) {
+            $('#stage').append('<tr><td> Produto </td><td> Valor </td></tr>');             
+            p.produtos.forEach(produto => {
+                $('#stage').append('<tr><td>' + produto.nome + '</td><td>' + produto.valor + '</td></tr>');    
+                resultado += parseFloat(produto.valor);
+            });
+            $('#stage').append('<tr><td> Total: </td><td>' + resultado + '</td></tr>');    
+      });
+   });
+   </script>
+</head>
+<body>
+    <p>Lista de Compras:</p>
+    <table id="stage">      
+    </table>
+    <br>
+</body>
+</html>

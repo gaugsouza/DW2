@@ -1,0 +1,44 @@
+{
+    "produtos" : [
+        {
+            "nome" : "Leite",
+            "valor" : "4.99"
+        },
+        {
+            "nome" : "Feijâo",
+            "valor" : "1.99"
+        },
+        {
+            "nome" : "Batata",
+            "valor" : "0.99"
+        },
+        {
+            "nome" : "Brócolis",
+            "valor" : "5.99"
+        },
+        {
+            "nome" : "Arroz",
+            "valor" : "10.00"
+        },
+        {
+            "nome" : "Carne",
+            "valor" : "24.99"
+        },
+        {
+            "nome" : "Frango",
+            "valor" : "12.99"
+        },
+        {
+            "nome" : "Fiat Uno",
+            "valor" : "14000.50"
+        },
+        {
+            "nome" : "Corsa 2007",
+            "valor" : "18000.70"
+        },
+        {
+            "nome" : "Miojo Galinha Caipira",
+            "valor" : "1.00"
+        }
+    ]
+}
