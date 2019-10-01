@@ -3,25 +3,22 @@
 <head>
 <title>Mercado</title>
    <meta charset="UTF-8">
+   <link rel="stylesheet" href="style.css">
    <script type="text/javascript" src="../jQuery/jquery-3.4.1.min.js"></script>
-   <script type="text/javascript" language="javascript">
-   $(function() {
-        let resultado = 0;
-        $.getJSON('../jQuery/dadosExemplo.json', function(p) {
-            $('#stage').append('<tr><td> Produto </td><td> Valor </td></tr>');             
-            p.produtos.forEach(produto => {
-                $('#stage').append('<tr><td>' + produto.nome + '</td><td>' + produto.valor + '</td></tr>');    
-                resultado += parseFloat(produto.valor);
-            });
-            $('#stage').append('<tr><td> Total: </td><td>' + resultado + '</td></tr>');    
-      });
-   });
-   </script>
+   <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-    <p>Lista de Compras:</p>
-    <table id="stage">      
-    </table>
-    <br>
+    <div class="container">
+        <span class="title">Lista de Compras:</span>
+        <table id="stage">      
+        </table>
+        <form>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" required>
+            <label for="nome">Valor</label>
+            <input type="number" name="valor" required>
+            <input type="submit" value="Inserir Produto">
+        </form>
+    </div>
 </body>
 </html>

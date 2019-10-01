@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemplo 3 on</title>
+    <style>
+        p{
+            background: yellow;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 5px;
+        }
+        p.over{ background: #ccc;}
+        span{ color: red; }
+    </style>
+    <script type="text/javascript" src="../jQuery/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <p>Clique aqui!</p>
+    <span></span>
+    <script>
+        var count=0;
+        $("body").on("click", "p", function(){
+            $(this).after("<p> Outro paragrafo! " + (++count) + "</p>");
+        });
+    </script>
+</body>
+</html>

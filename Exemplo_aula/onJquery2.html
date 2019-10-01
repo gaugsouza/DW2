@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemplo 2 on</title>
+    <style>
+        .test{
+            color:#000;
+            padding: .5em;
+            border: 1px solid #444;
+        }
+        .active{
+            color:#900;
+        }
+        .inside{
+            background-color: aqua;
+        }
+    </style>
+    <script type="text/javascript" src="../jQuery/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div class="teste">teste div</div>
+    <script>
+        $("div.teste").on({
+            click: function(){
+                $(this).toggleClass("active");
+            }, mouseenter: function(){
+                $(this).addClass("inside");
+            }, mouseleave: function(){
+                $(this).removeClass("inside");
+            }
+        });
+    </script>
+</body>
+</html>
