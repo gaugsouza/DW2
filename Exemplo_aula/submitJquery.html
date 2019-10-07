@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemplo Submit</title>
+    <style>
+        p{
+            margin: 0;
+            color: blue;
+        }
+        div, p{
+            margin-left: 10px;
+        }
+        span{
+            color:red;
+        }
+    </style>
+    <script type="text/javascript" src="jQuery/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <p>Digite "Curso de ADS" para validar o texto</p>
+    <form action="javascript:alert('Texto Validado com Sucesso!');">
+        <div>
+            <input type="text">
+            <input type="submit">
+        </div>
+    </form>
+    <span id="espaco"></span>
+    <script>
+        $("form").submit(function(event){
+            if($( "input" ).first().val() === "Curso de ADS") {
+                $( "span" ).text("Validando...").show().fadeOut(3000);
+                return;
+            }
+            $( "span" ).text("Texto nâo Validado").show().fadeOut(3000);
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>

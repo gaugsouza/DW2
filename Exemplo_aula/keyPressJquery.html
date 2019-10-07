@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemplo KeyPress</title>
+    <script type="text/javascript" src="jQuery/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <label for="target"> Digite o seu texto </label>
+            <input type="text" id="target">
+        </fieldset>
+    </form>
+    <button id="other"> Adicionar o manipulador </button>
+    <script src="https://api.jquery.com/resources/events.js"></script>
+    <script>
+        var cont = 0;
+        $("#target").keypress(function(event){
+            if(event.which == 13){
+                event.preventDefault();
+            }
+            cont ++;
+            var msg = "Manipulador para .keypress() chamado " + cont + ": Total de caracteres digitados.";
+            $.print(msg, 'html');
+        });
+        $("#other").click(function(){
+            $("#target").keypress();
+        })
+    </script>
+</body>
+</html>
