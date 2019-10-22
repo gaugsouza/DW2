@@ -1,0 +1,128 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    /*Posicionamento*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.title{
+    /*Posicionamento*/
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    /*Dimensões*/
+    height: 30px;
+    width: 50%;
+    /*Texto*/
+    color:#a8003b;    
+    text-align: center;
+    font: bold 30px arial, sans-serif ;
+}
+table{
+    /*Posicionamento*/
+    display: inherit;
+    flex-direction: column;
+    /*Dimensões*/
+    width: 40%;
+    /*Aspectos visuais*/
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.tableHeader{
+    /*Posicionamento*/
+    display: inherit;
+    /*Dimensões*/
+    width: 100%;
+    /*Aspectos visuais*/
+    background: #a8003b;
+    font: bold 30px arial, sans-serif;
+    color: #FFF;
+    border: 1px solid black;    
+}
+.tableBody{
+    /*Posicionamento*/
+    display: inherit;
+    padding: 1px 0px 1px 0px;
+    /*Aspectos visuais*/
+    font: 20px arial, sans-serif;
+    color: #000;
+}
+.tableFooter{
+    /*Posicionamento*/
+    display: inherit;
+    /*Aspectos visuais*/
+    background: #a8003b;
+    font: bold 25px arial, sans-serif;
+    color: #FFF;
+    border: 1px solid black;
+}
+form{
+    /*Posicionamento*/
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px 20px 0px;
+    /*Dimensões*/
+    width: 40%;
+    /*Aspectos visuais*/
+    font: bold 20px Arial, sans-serif;
+}
+form>input{
+    /*Posicionamento*/
+    margin-right:5px;
+    /*Dimensões*/
+    width: 120px;
+    height: 30px;
+    /*Aspectos visuais*/
+    border: solid 2px #3d0015;
+    border-radius: 5px;   
+    font-weight: bold;
+    color: #3d0015;     
+    cursor: pointer;
+    background: #ededed;
+    transition: 0.3s;
+}
+form>input:hover{
+    color: #ededed;    
+    background: #3d0015;
+}
+
+.formItem{
+    /*Posicionamento*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*Dimensões*/
+    width:100%;
+    /*Aspectos visuais*/
+    color: #3d0015;
+}
+.formItem>input{
+    /*Posicionamento*/
+    padding: 0 0 0 3px;
+    /*Dimensões*/
+    height: 26px;
+    /*Aspectos visuais*/
+    width: 10vw;
+    border: solid 2px #3d0015;
+    border-radius: 5px;  
+    font: 17px Arial, sans-serif;
+}
+.flexItem{
+    /*Posicionamento*/
+    display: inherit;
+    justify-content: center;
+    /*Dimensões*/
+    width: 100%;
+}
+.tableBody:nth-child(odd){
+    background: #f1f1f1
+}
+.tableBody:nth-child(even){
+    background: #ededed
+}
